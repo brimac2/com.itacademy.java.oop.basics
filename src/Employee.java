@@ -1,8 +1,22 @@
 public class Employee {
 
+    public enum ContractType {
+        FULLTIME {
+            public String toString() {
+                return "Full-Time";
+            }
+        },
+
+        PARTTIME {
+            public String toString() {
+                return "Part-Time";
+            }
+        }
+    }
+
     private String name;
     private String surname;
-    private String contractType;
+    private ContractType contractType;
     private String contractStartDate;
     private int salary;
     private String position;
@@ -13,7 +27,7 @@ public class Employee {
     //    constructor empty end
 
 //    constructor
-    public Employee(String name, String surname, String contractType, String contractStartDate, int salary, String position) {
+    public Employee(String name, String surname, ContractType contractType, String contractStartDate, int salary, String position) {
         this.name = name;
         this.surname = surname;
         this.contractType = contractType;
@@ -31,7 +45,7 @@ public class Employee {
         this.surname = surname;
     }
 
-    public void setContractType(String contractType) {
+    public void setContractType(ContractType contractType) {
         this.contractType = contractType;
     }
 
@@ -55,7 +69,7 @@ public class Employee {
         return surname;
     }
 
-    public String getContractType() {
+    public ContractType getContractType() {
         return contractType;
     }
 
