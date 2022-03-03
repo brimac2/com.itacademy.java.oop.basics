@@ -14,13 +14,14 @@ public class Employee {
         }
     }
 
+//    variables
     private String name;
     private String surname;
     private ContractType contractType;
     private String contractStartDate;
     private int salary;
     private String position;
-
+//
 //    constructor empty
     public Employee() {
     }
@@ -36,7 +37,7 @@ public class Employee {
         this.position = position;
     }
     //    constructor end
-
+//      funkcija SET kuri nustato name
     public void setName(String name) {
         this.name = name;
     }
@@ -61,29 +62,13 @@ public class Employee {
         this.position = position;
     }
 
-    public String getName() {
-        return name;
+    public String getEmployeeManager() {
+        if( salary > 0) {
+            return name + " " + surname + ". " + contractType + " employee which started " + contractStartDate + ". Starting salary is " + salary + "$ at " + position + " position.";
+        }
+        return name + " " + surname;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public ContractType getContractType() {
-        return contractType;
-    }
-
-    public String getContractStartDate() {
-        return contractStartDate;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public String getPosition() {
-        return position;
-    }
 }
 
 
