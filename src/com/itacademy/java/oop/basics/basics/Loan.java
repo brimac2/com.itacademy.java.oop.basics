@@ -1,3 +1,5 @@
+package com.itacademy.java.oop.basics.basics;
+
 public class Loan {
 
     public enum enumLoanType {

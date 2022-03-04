@@ -1,6 +1,4 @@
-import java.net.SocketOption;
-import java.net.SocketTimeoutException;
-import java.util.ArrayList;
+package com.itacademy.java.oop.basics.basics;
 
 public class LaonsApplication {
     private boolean get;

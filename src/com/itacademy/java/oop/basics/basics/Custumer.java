@@ -1,3 +1,5 @@
+package com.itacademy.java.oop.basics.basics;
+
 import java.util.Arrays;
 
 public class Custumer {

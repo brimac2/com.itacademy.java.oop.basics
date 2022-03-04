@@ -1,3 +1,5 @@
+package com.itacademy.java.oop.basics.basics;
+
 public class EmployeeManager {
     public static void main(String[] args) {
 //        Created object with args
