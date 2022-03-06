@@ -2,11 +2,32 @@ package task2;
 
 public class Speedometer {
 
-    //Java Program to demonstrate the use of a static method.
-    public static void chooseWinner{
-        String mountainBike;
-        String roadBike;
-        int mountainBikeSpeed;
-        int roadBikeSpeed;
+    public enum Bike {
+        MOUNTAIN {
+            public String toString() {
+                return "Mountain";
+            }
+        },
+        ROAD {
+            public String toString() {
+                return "Road";
+            }
+        };
     }
+
+    public static Bike chooseWinner(MountainBike mountainBike, RoadBike roadBike){
+        if(mountainBike.getSpeed() > roadBike.getSpeed()){
+            return Bike.MOUNTAIN;
+        };
+        return Bike.ROAD;
+    };
+
+    public static Bike chooseWinner(int mountainBikeSpeed, int roadBikeSpeed) {
+        if(mountainBikeSpeed > roadBikeSpeed){
+            return Bike.MOUNTAIN;
+        };
+        return Bike.ROAD;
+    };
+
+
 }

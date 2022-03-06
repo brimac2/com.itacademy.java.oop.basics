@@ -1,7 +1,9 @@
 package task2;
 
+public class MountainBike implements Bicycle {
 
-public class RoadBike implements Bicycle {
+   private int gear;
+   private int speed;
 
     @Override
     public void changeGear(int newGear) {
@@ -18,11 +20,7 @@ public class RoadBike implements Bicycle {
 
     }
 
-
-    private int gear;
-    private int speed;
-
-    public RoadBike(int gear, int speed) {
+    public MountainBike(int gear, int speed) {
         this.gear = gear;
         this.speed = speed;
     }
@@ -30,4 +28,5 @@ public class RoadBike implements Bicycle {
     public int getSpeed() {
         return speed;
     }
+    
 }
