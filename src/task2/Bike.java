@@ -1,8 +1,8 @@
 package task2;
 
 public enum Bike {
-    MOUNTAIN("MOUNTAIN BIKE"),
-    ROAD("ROAD BIKE");
+    MOUNTAIN("Mountain Bike"),
+    ROAD("Road Bike");
     private final String desc;
 
     Bike(String description) {

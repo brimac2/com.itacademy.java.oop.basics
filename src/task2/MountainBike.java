@@ -6,10 +6,23 @@ public class MountainBike implements Bicycle {
     private int MaxSpeed = 100;
     private int gear;
     private int speed;
+    private int maxGear = 20;
+
+    public MountainBike(int gear, int speed) {
+        this.gear = gear;
+        this.speed = speed;
+    }
 
     @Override
     public void changeGear(int newGear) {
-
+        if (newGear != 1 || newGear != -1) {
+            System.out.println("Your number is not allowed, please use -1 or 1");
+        } else if (gear + newGear < 0 || gear + newGear > 20) {
+            System.out.println("Gear should be maximum 20 or below 0");
+        }else {
+            gear+=newGear;
+            System.out.println("It is new gear " + gear);
+        }
     }
 
     @Override
@@ -21,7 +34,7 @@ public class MountainBike implements Bicycle {
             System.out.println("Speed is too high, it can be increased " + allowanceIncrement );
         } else {
             speed +=increment;
-            System.out.println("It is a new speed " + speed);
+            System.out.println("It is a new speed Mountain Bike speed " + speed);
         }
 
     }
@@ -39,10 +52,7 @@ public class MountainBike implements Bicycle {
         }
     }
 
-    public MountainBike(int gear, int speed) {
-        this.gear = gear;
-        this.speed = speed;
-    }
+
 
     public int getSpeed() {
         return speed;
