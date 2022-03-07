@@ -6,5 +6,5 @@ public interface Bicycle {
 
     public void speedUp(int increment);
 
-    public void applyBreaks();
+    public void applyBreaks(int decreasement);
 }

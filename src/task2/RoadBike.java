@@ -14,7 +14,7 @@ public class RoadBike implements Bicycle {
     }
 
     @Override
-    public void applyBreaks() {
+    public void applyBreaks(int decreasement) {
 
     }
 

@@ -2,19 +2,6 @@ package task2;
 
 public class Speedometer {
 
-    public enum Bike {
-        MOUNTAIN {
-            public String toString() {
-                return "Mountain";
-            }
-        },
-        ROAD {
-            public String toString() {
-                return "Road";
-            }
-        };
-    }
-
     public static Bike chooseWinner(MountainBike mountainBike, RoadBike roadBike){
         if(mountainBike.getSpeed() > roadBike.getSpeed()){
             return Bike.MOUNTAIN;
