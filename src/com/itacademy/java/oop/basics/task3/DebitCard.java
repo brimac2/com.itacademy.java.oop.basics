@@ -9,18 +9,27 @@ public class DebitCard extends Card {
 
     @Override
     public void credit(double amount) {
-        if (amount <= balance) {
-            balance -= amount;
-            System.out.println("Your total is " + balance);
+        if (amount >= 0) {
+            if (amount <= balance) {
+                balance -= amount;
+                System.out.println("Your total is " + balance);
+            } else {
+                System.out.println("NotEnoughBalanceException");
+            }
         } else {
-            System.out.println("You do not have enough, please check your balance");
+            System.out.println("Amount can not be negative");
         }
     }
 
     @Override
     public void debit(double amount) {
-        balance += amount;
-        System.out.println("Your total is " + balance);
+        if (amount >= 0) {
+            balance += amount;
+            System.out.println("Your total is " + balance);
+        } else {
+            System.out.println("Amount can not be negative");
+        }
+
     }
 }
 
