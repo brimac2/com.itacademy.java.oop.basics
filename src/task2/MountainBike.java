@@ -2,11 +2,11 @@ package task2;
 
 public class MountainBike implements Bicycle {
 
-    private int MinSpeed = -10;
-    private int MaxSpeed = 100;
+    private static final int MIN_SPEED = -10;
+    private static final int MAX_SPEED = 100;
     private int gear;
     private int speed;
-    private int MaxGear = 20;
+
 
     public MountainBike(int gear, int speed) {
         this.gear = gear;
@@ -29,8 +29,8 @@ public class MountainBike implements Bicycle {
     public void speedUp(int increment) {
         if (increment < 0) {
             System.out.println("Your number is negative, please use positive numbers");
-        } else if (speed + increment > MaxSpeed) {
-            int allowanceIncrement = MaxSpeed - speed;
+        } else if (speed + increment > MAX_SPEED) {
+            int allowanceIncrement = MAX_SPEED - speed;
             System.out.println("Speed is too high, it can be increased " + allowanceIncrement);
         } else {
             speed += increment;
@@ -43,8 +43,8 @@ public class MountainBike implements Bicycle {
     public void applyBreaks(int decreasement) {
         if (decreasement < 0) {
             System.out.println("Your number is negative, please use positive numbers");
-        } else if (speed - decreasement < MinSpeed) {
-            int allowance = speed - MinSpeed;
+        } else if (speed - decreasement < MIN_SPEED) {
+            int allowance = speed - MIN_SPEED;
             System.out.println("Value is too high you can break at " + allowance);
         } else {
             speed -= decreasement;
