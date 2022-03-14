@@ -1,34 +1,22 @@
 public class Employee {
 
-    public enum ContractType {
-        FULLTIME {
-            public String toString() {
-                return "Full-Time";
-            }
-        },
 
-        PARTTIME {
-            public String toString() {
-                return "Part-Time";
-            }
-        }
-    }
-
-//    variables
+    //    variables
     private String name;
     private String surname;
-    private ContractType contractType;
+    private ContractType.ContractTypeName contractType;
     private String contractStartDate;
     private int salary;
     private String position;
-//
+
+    //
 //    constructor empty
     public Employee() {
     }
     //    constructor empty end
 
-//    constructor
-    public Employee(String name, String surname, ContractType contractType, String contractStartDate, int salary, String position) {
+    //    constructor
+    public Employee(String name, String surname, ContractType.ContractTypeName contractType, String contractStartDate, int salary, String position) {
         this.name = name;
         this.surname = surname;
         this.contractType = contractType;
@@ -36,6 +24,11 @@ public class Employee {
         this.salary = salary;
         this.position = position;
     }
+
+
+//    public Employee(String suzie, String jack, ContractType.ContractTypeName parttime, String contractStartDate, int salary, String manager) {
+//    }
+
     //    constructor end
 //      funkcija SET kuri nustato name
     public void setName(String name) {
@@ -46,7 +39,7 @@ public class Employee {
         this.surname = surname;
     }
 
-    public void setContractType(ContractType contractType) {
+    public void setContractType(ContractType.ContractTypeName contractType) {
         this.contractType = contractType;
     }
 
@@ -63,7 +56,7 @@ public class Employee {
     }
 
     public String getEmployeeManager() {
-        if( salary > 0) {
+        if (salary > 0) {
             return name + " " + surname + ". " + contractType + " employee which started " + contractStartDate + ". Starting salary is " + salary + "$ at " + position + " position.";
         }
         return name + " " + surname;
